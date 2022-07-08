@@ -12,3 +12,7 @@ open project, run npm install
 run npm start
 
 ### Contributing (optional, if open sourced)
+
+### Resources
+
+lego.com
