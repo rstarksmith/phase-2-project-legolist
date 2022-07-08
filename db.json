@@ -1,0 +1,100 @@
+{
+    "sets": [
+        { 
+            "id": 1,
+            "name": "Hogwarts Clock Tower",
+            "theme": "Harry Potter",
+            "image": "https://www.lego.com/cdn/cs/set/assets/bltac4bd5826e26726f/75948.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
+            "pieces": 922,
+            "built": true
+        },
+        { 
+            "id": 2,
+            "name": "R2-D2",
+            "theme": "Star Wars",
+            "image": "https://www.lego.com/cdn/cs/set/assets/blt38e8915698af2d5f/75308.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
+            "pieces": 2314,
+            "built": true
+        },
+        { 
+            "id": 3,
+            "name": "Central Perk",
+            "theme": "LEGO Ideas",
+            "image": "https://target.scene7.com/is/image/Target/GUEST_61a03b46-f3fe-4ab0-80b0-6c3a817e59a0?wid=488&hei=488&fmt=pjpeg",
+            "pieces": 1070,
+            "built": false
+        },
+        { 
+            "id": 4,
+            "name": "Millennium Falcon",
+            "theme": "Star Wars",
+            "image": "https://www.lego.com/cdn/cs/set/assets/blt892f38a4fd55edeb/75257.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
+            "pieces": 7541,
+            "built": true
+        },
+        { 
+            "id": 5,
+            "name": "The Upside Down",
+            "theme": "Stranger Things",
+            "image": "https://www.lego.com/cdn/cs/set/assets/bltc7618b3e8c497a2e/75810.jpg?fit=bounds&format=jpg&quality=80&width=528&height=528&dpr=1",
+            "pieces": 2287,
+            "built": false
+        },
+        { 
+            "id": 6,
+            "name": "Hogwarts Castle",
+            "theme": "Harry Potter",
+            "image": "https://www.lego.com/cdn/cs/set/assets/blt2c408dc4fb192074/71043.jpg?fit=bounds&format=jpg&quality=80&width=528&height=528&dpr=1",
+            "pieces": 6020,
+            "built": false
+        },
+        { 
+            "id": 7,
+            "name": "The Disney Castle",
+            "theme": "Disney",
+            "image": "https://www.lego.com/cdn/cs/set/assets/blt9ecbcfc462381676/71040.jpg?fit=bounds&format=jpg&quality=80&width=528&height=528&dpr=1",
+            "pieces": 4080,
+            "built": true
+        },
+        { 
+            "id": 8,
+            "name": "4 Privet Drive",
+            "theme": "Harry Potter",
+            "image": "https://www.lego.com/cdn/cs/set/assets/blt33e23ec9a964a70d/75968.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
+            "pieces": 797,
+            "built": true
+        },
+        { 
+            "id": 9,
+            "name": "The Knight Bus",
+            "theme": "Harry Potter",
+            "image": "https://www.lego.com/cdn/cs/set/assets/bltc8402bc419a25118/75957.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
+            "pieces": 403,
+            "built": false
+        },
+        { 
+            "id": 10,
+            "name": "Home Alone",
+            "theme": "LEGO Ideas",
+            "image": "https://target.scene7.com/is/image/Target/GUEST_49e4da16-8f6c-41a0-8767-fd319745194c?wid=488&hei=488&fmt=pjpeg",
+            "pieces": 3955,
+            "built": true
+        },
+        { 
+            "id": 11,
+            "name": "The Child",
+            "theme": "Star Wars",
+            "image": "https://www.lego.com/cdn/cs/set/assets/blt4077c030eb5d127d/75318.jpg?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1",
+            "pieces": 1073,
+            "built": true
+        },
+        { 
+            "id": 12,
+            "name": "Typewriter",
+            "theme": "LEGO ideas",
+            "image": "https://cdn.shopify.com/s/files/1/0011/6218/2714/products/lego-ideas-typewriter-21327_001_720x@2x.jpg?v=1623917675",
+            "pieces": 2079,
+            "built": true
+        }
+    ]
+}
