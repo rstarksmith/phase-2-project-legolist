@@ -11,7 +11,7 @@ const LegoForm = () => {
             <input type="text" name="theme" placeholder="Theme" /><br/>
             <input type="number" name="pieces" placeholder="# of Pieces" /><br/>
             <input type="checkbox" name="built" value="built"/>
-            <label for="built">Built</label><br/>
+            <label htmlFor="built">Built</label><br/>
             <button type="submit">Add Set</button>
           </form>
     </div>

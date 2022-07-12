@@ -2,7 +2,9 @@ import React from 'react'
 
 const LegoList = () => {
     return (
-    <div>LegoList</div>
+        <div>
+            Render LegoList cards
+        </div>
     )
 }
 

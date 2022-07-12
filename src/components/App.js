@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home";
@@ -7,18 +7,24 @@ import LegoForm from "./LegoForm";
 
 
 function App() {
+  const [page, setPage] = useState('/')
+
+  const handlePageClick = (e, page) => {
+    setPage(page)
+  }
+
   return (
     <div>
-      <NavBar />
+      <NavBar handlePageClick={handlePageClick} />
       <Switch>
-        <Route exact path="/">
-          <Home />
+        <Route path="/sets/new">
+          <LegoForm />
         </Route>
-        <Route exact path="/sets">
+        <Route path="/sets">
           <LegoList />
         </Route>
-        <Route exact path="/sets/new">
-          <LegoForm />
+        <Route exact path="/">
+          <Home />
         </Route>
       </Switch>
     </div>

@@ -2,7 +2,11 @@ import React from 'react'
 
 const LegoSetDetails = () => {
     return (
-    <div>LegoSetDetails</div>
+        <div>
+            <p>Theme: </p>
+            <p>Pieces: </p>
+            {/* <p>{built ? "" : ""}</p> */}
+        </div>
     )
 }
 

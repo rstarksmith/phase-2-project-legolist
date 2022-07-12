@@ -1,15 +1,16 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 
-const NavBar = () => {
+const NavBar = ({ handlePageClick }) => {
     return (
-        <nav className="navbar">
+        <nav className="navbar" onClick={(e) => console.log('click')}>
             <div className="logo">LEGO List</div>
                 <ul className="nav-links">
                     <div className="menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/">List</a></li>
-                        <li><a href="/">Add Set</a></li>
+                        <NavLink exact to="/">Home</NavLink>
+                        <NavLink to="/sets">List</NavLink>
+                        <NavLink to="/sets/new">Add Set</NavLink>
                     </div>
                 </ul>
         </nav>
