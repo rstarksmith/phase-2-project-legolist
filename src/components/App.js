@@ -1,34 +1,36 @@
-import React, { useState } from "react"
-import { Switch, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home";
 import LegoList from "./LegoList";
 import LegoForm from "./LegoForm";
 
 
-function App() {
-  const [page, setPage] = useState('/')
+const App = () => {
+  const [legos, setLegos] = useState([])
 
-  const handlePageClick = (e, page) => {
-    setPage(page)
-  }
+  useEffect(() => {
+    fetch('http://localhost:3001/sets')
+    .then(resp => resp.json())
+    .then(legos => setLegos(legos))
+  }, [])
 
   return (
-    <div>
-      <NavBar handlePageClick={handlePageClick} />
+    <Router>
+      <NavBar />
       <Switch>
         <Route path="/sets/new">
           <LegoForm />
         </Route>
         <Route path="/sets">
-          <LegoList />
+          <LegoList legos={legos} />
         </Route>
         <Route exact path="/">
           <Home />
         </Route>
       </Switch>
-    </div>
-  );
+    </Router>
+  )
 }
 
 export default App;

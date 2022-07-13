@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LegoSetDetails from './LegoSetDetails'
 
-const LegoSet = () => {
+const LegoSet = ({ lego }) => {
+    const [showDetails, setShowDetails] = useState(false)
+
+    const handleDetails = () => {
+        setShowDetails(!showDetails)
+    }
     return (
-        <div class="card">
-            <img src="img_avatar.png" alt="Lego Set" style="width:100%" />
-            <div class="container">
-                <h4><b>Name</b></h4>
-                <button>Show Details</button>
-                <LegoSetDetails />
-                <button>Delete</button>
+        <div className="card">
+            <img className="card-img" src={lego.image} alt="Lego Set" /> 
+            <div className="container">
+                <h3>{lego.name}</h3>
+                {showDetails ? <LegoSetDetails lego={lego}/> : null}
+                <button onClick={handleDetails} >＋ More Details</button>
+                <button>🗑 Delete</button>
             </div>
         </div>
     )
 }
 
 export default LegoSet
+
+//style="width:100%

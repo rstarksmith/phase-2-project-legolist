@@ -1,10 +1,12 @@
 import React from 'react'
 
 
+
 const LegoForm = () => {
     return (
     <div>
-        <h2>New Lego Set</h2><br/>
+        <img src='http://atlas-content-cdn.pixelsquid.com/stock-images/lego-man-people-QJD6KQA-600.jpg' alt='Lego character' />
+        <br/>
           <form>
             <input type="text" name="name" placeholder="Name" /><br/>
             <input type="text" name="image" placeholder="Image URL" /><br/>

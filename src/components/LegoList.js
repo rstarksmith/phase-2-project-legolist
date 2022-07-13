@@ -1,9 +1,10 @@
 import React from 'react'
+import LegoSet from './LegoSet'
 
-const LegoList = () => {
+const LegoList = ({ legos }) => {
     return (
         <div>
-            Render LegoList cards
+            {legos.map((lego) => (<LegoSet key={lego.id} lego={lego} />))}
         </div>
     )
 }
