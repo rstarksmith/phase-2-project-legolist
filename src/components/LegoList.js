@@ -3,10 +3,10 @@ import LegoSet from './LegoSet'
 
 const LegoList = ({ legos, handleSetDelete, handleSearch }) => {
     const [search, setSearch] = useState('')
-
     const handleSubmit = (e) => {
         e.preventDefault()
         handleSearch(search)
+        setSearch('')
     }
 
     return (

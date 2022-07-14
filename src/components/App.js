@@ -8,11 +8,15 @@ import LegoForm from "./LegoForm";
 
 const App = () => {
   const [legos, setLegos] = useState([])
+  const [currentLegos, setCurrentLegos] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:3001/sets')
     .then(resp => resp.json())
-    .then(resp => setLegos(resp))
+    .then(resp => {
+      setLegos(resp)
+      setCurrentLegos(resp)
+    })
   }, [])
 
 
@@ -27,8 +31,8 @@ const App = () => {
 
   const handleSearch = (search) => {
     const filteredLegos = legos.filter(lego => {
-      lego.name.toLowerCase().includes(search)})
-      setLegos(filteredLegos)
+      return lego.name.toLowerCase().includes(search)})
+    setCurrentLegos(filteredLegos)
   }
 
   return (
@@ -39,7 +43,7 @@ const App = () => {
           <LegoForm handleAddSet={handleAddSet} />
         </Route>
         <Route path="/sets">
-          <LegoList legos={legos} handleSetDelete={handleSetDelete} handleSearch={handleSearch}/>
+          <LegoList legos={currentLegos} handleSetDelete={handleSetDelete} handleSearch={handleSearch}/>
         </Route>
         <Route exact path="/">
           <Home />
