@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 
 
 
-const LegoForm = ( { legos }) => {
+const LegoForm = ( { legos, handleAddSet}) => {
   const [name, setName] = useState('')
   const [image, setImage] = useState('')
   const [theme, setTheme] = useState('')
   const [pieces, setPieces] = useState(0)
   const [built, setBuilt] = useState(false)
+
+  
 
   const handleNewSet = (e) => {
     e.preventDefault()
@@ -18,7 +20,6 @@ const LegoForm = ( { legos }) => {
       pieces: parseInt(pieces), 
       built 
     }
-    console.log('in function', legoData)
     fetch('http://localhost:3001/sets', {
       method: 'POST',
       headers: {
@@ -27,7 +28,14 @@ const LegoForm = ( { legos }) => {
       body: JSON.stringify(legoData),
     })
     .then(resp => resp.json())
-    .then(resp => console.log('resp', resp))
+    .then(newSet => {
+      handleAddSet(newSet)
+      setName('')
+      setImage('')
+      setTheme('')
+      setPieces(0)
+    })
+    //add callback funtion to update legos and reset form on submit
   }
 
     return (
@@ -36,10 +44,10 @@ const LegoForm = ( { legos }) => {
         <br/>
           <form onSubmit={handleNewSet}>
             <input type="text" onChange={(e) => setName(e.target.value)} value={name} placeholder="Name" /><br/><br/>
-            <input type="text" onChange={(e) => setImage(e.target.value)}value={image} placeholder="Image URL" /><br/><br/>
-            <input type="text" onChange={(e) => setTheme(e.target.value)}value={theme} placeholder="Theme" /><br/><br/>
-            <input type="number" onChange={(e) => setPieces(e.target.value)}value={pieces} placeholder="# of Pieces" /><br/><br/>
-            <input type="checkbox" onChange={(e) => setBuilt(e.target.checked)}value={built}/>
+            <input type="text" onChange={(e) => setImage(e.target.value)} value={image} placeholder="Image URL" /><br/><br/>
+            <input type="text" onChange={(e) => setTheme(e.target.value)} value={theme} placeholder="Theme" /><br/><br/>
+            <input type="number" onChange={(e) => setPieces(e.target.value)} value={pieces} placeholder="# of Pieces" /><br/><br/>
+            <input type="checkbox" onChange={(e) => setBuilt(e.target.checked)} value={built}/>
             <label htmlFor="built">Built</label><br/><br/>
             <button type="submit">Add Set</button>
           </form>

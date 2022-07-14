@@ -21,13 +21,17 @@ const App = () => {
     setLegos(updatedLegos)
   }
 
+  const handleAddSet = (newSet) => {
+    setLegos([...legos, newSet])
+  }
+
 
   return (
     <Router>
       <NavBar />
       <Switch>
         <Route path="/sets/new">
-          <LegoForm />
+          <LegoForm handleAddSet={handleAddSet} />
         </Route>
         <Route path="/sets">
           <LegoList legos={legos} handleSetDelete={handleSetDelete}/>

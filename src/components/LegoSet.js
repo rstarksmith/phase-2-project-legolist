@@ -13,7 +13,7 @@ const LegoSet = ({ lego, handleSetDelete }) => {
             method: 'DELETE'
         })
         .then(resp => resp.json())
-        .then(handleSetDelete(lego.id))
+        .then(data => handleSetDelete(lego.id))
     }
 
     return (
