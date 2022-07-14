@@ -13,15 +13,15 @@ const LegoSet = ({ lego, handleSetDelete }) => {
             method: 'DELETE'
         })
         .then(resp => resp.json())
-        .then(() => handleSetDelete(lego.id))
+        .then(handleSetDelete(lego.id))
     }
 
     return (
         <div className="card">
             <img className="card-img" src={lego.image} alt="Lego Set" /> 
             <div className="container">
-                <h3>{lego.name}</h3>
-                {showDetails ? <LegoSetDetails lego={lego}/> : null}
+                <h3>{lego.name}</h3><br/>
+                {showDetails ? <LegoSetDetails lego={lego}/> : null}<br/>
                 <button onClick={handleDetails} >＋ More Details</button>
                 <button onClick={handleDelete}>🗑 Delete</button>
             </div>
@@ -30,5 +30,3 @@ const LegoSet = ({ lego, handleSetDelete }) => {
 }
 
 export default LegoSet
-
-//style="width:100%

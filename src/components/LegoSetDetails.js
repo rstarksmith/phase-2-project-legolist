@@ -5,7 +5,7 @@ const LegoSetDetails = ({ lego }) => {
         <div>
             <p><strong>Theme:</strong> {lego.theme}</p>
             <p><strong>Pieces:</strong> {lego.pieces} </p>
-            {/* <p>{built ? "" : ""}</p> */}
+            <p>{lego.built ? "Built " : "In Box"}</p>
         </div>
     )
 }
