@@ -21,7 +21,7 @@ const LegoForm = ( { legos }) => {
     console.log('in function', legoData)
     fetch('http://localhost:3001/sets', {
       method: 'POST',
-      header: {
+      headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(legoData),
