@@ -12,8 +12,15 @@ const App = () => {
   useEffect(() => {
     fetch('http://localhost:3001/sets')
     .then(resp => resp.json())
-    .then(legos => setLegos(legos))
+    .then(resp => setLegos(resp))
   }, [])
+
+
+  const handleSetDelete = (id) => {
+    const updatedLegos = legos.filter(lego => lego.id !== id)
+    setLegos(updatedLegos)
+  }
+
 
   return (
     <Router>
@@ -23,7 +30,7 @@ const App = () => {
           <LegoForm />
         </Route>
         <Route path="/sets">
-          <LegoList legos={legos} />
+          <LegoList legos={legos} handleSetDelete={handleSetDelete}/>
         </Route>
         <Route exact path="/">
           <Home />
