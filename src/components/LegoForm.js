@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 
 
@@ -9,7 +10,7 @@ const LegoForm = ( { legos, handleAddSet}) => {
   const [pieces, setPieces] = useState(0)
   const [built, setBuilt] = useState(false)
 
-  
+  const history = useHistory()
 
   const handleNewSet = (e) => {
     e.preventDefault()
@@ -34,8 +35,9 @@ const LegoForm = ( { legos, handleAddSet}) => {
       setImage('')
       setTheme('')
       setPieces(0)
+      history.push('/sets')
     })
-    //add callback funtion to update legos and reset form on submit
+    
   }
 
     return (

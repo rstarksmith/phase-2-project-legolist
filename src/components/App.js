@@ -25,6 +25,11 @@ const App = () => {
     setLegos([...legos, newSet])
   }
 
+  const handleSearch = (search) => {
+    const filteredLegos = legos.filter(lego => {
+      lego.name.toLowerCase().includes(search)})
+      setLegos(filteredLegos)
+  }
 
   return (
     <Router>
@@ -34,7 +39,7 @@ const App = () => {
           <LegoForm handleAddSet={handleAddSet} />
         </Route>
         <Route path="/sets">
-          <LegoList legos={legos} handleSetDelete={handleSetDelete}/>
+          <LegoList legos={legos} handleSetDelete={handleSetDelete} handleSearch={handleSearch}/>
         </Route>
         <Route exact path="/">
           <Home />
