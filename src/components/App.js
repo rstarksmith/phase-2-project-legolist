@@ -19,14 +19,15 @@ const App = () => {
     })
   }, [])
 
-
   const handleSetDelete = (id) => {
     const updatedLegos = legos.filter(lego => lego.id !== id)
+    setCurrentLegos(updatedLegos)
     setLegos(updatedLegos)
   }
 
   const handleAddSet = (newSet) => {
     setLegos([...legos, newSet])
+    setCurrentLegos([...legos, newSet])
   }
 
   const handleSearch = (search) => {

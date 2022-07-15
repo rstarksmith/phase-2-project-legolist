@@ -97,28 +97,12 @@
       "built": true
     },
     {
-      "name": "fghdfgh",
-      "theme": "dfghdfg",
-      "image": "dfghdf",
-      "pieces": 4,
-      "built": false,
-      "id": 13
-    },
-    {
-      "name": "sfgsdfg",
-      "theme": "dfgdfg",
-      "image": "dfgdsfg",
-      "pieces": 4,
+      "name": "12 Grimmauld Place",
+      "theme": "Harry Potter",
+      "image": "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2022/04/Screen-Shot-2022-04-09-at-3.28.30-PM.jpg",
+      "pieces": 8543,
       "built": false,
       "id": 14
-    },
-    {
-      "name": "dfd",
-      "theme": "sdf",
-      "image": "sdf",
-      "pieces": 0,
-      "built": false,
-      "id": 15
     }
   ]
 }
