@@ -13,10 +13,12 @@ const LegoList = ({ legos, handleSetDelete, handleSearch }) => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <input onChange={(e) => setSearch(e.target.value)} type="search" id="search" placeholder="🔍 Search..." value={search}></input>
-                {/* <button type="submit" >🔍</button> */}
-            </form>
+            <div className='search-container'>
+                <form onSubmit={handleSubmit}>
+                    <input  className='input' onChange={(e) => setSearch(e.target.value)} type="text" placeholder="🔍 Name..." value={search}></input>
+                    <button className='list-button' type="submit" >Search</button>
+                </form>
+            </div>    
             <div>
                 {legos.map((lego) => (<LegoSet key={lego.id} lego={lego} handleSetDelete={handleSetDelete}/>))}
             </div>

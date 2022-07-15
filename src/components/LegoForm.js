@@ -42,16 +42,15 @@ const LegoForm = ( { legos, handleAddSet}) => {
 
     return (
     <div>
-        <img src='http://atlas-content-cdn.pixelsquid.com/stock-images/lego-man-people-QJD6KQA-600.jpg' alt='Lego character' />
-        <br/>
+        <img className='lego-image' src='https://i.imgur.com/M4Q9eKd.png' alt='Lego character' />
           <form onSubmit={handleNewSet}>
-            <input type="text" onChange={(e) => setName(e.target.value)} value={name} placeholder="Name" /><br/><br/>
-            <input type="text" onChange={(e) => setImage(e.target.value)} value={image} placeholder="Image URL" /><br/><br/>
-            <input type="text" onChange={(e) => setTheme(e.target.value)} value={theme} placeholder="Theme" /><br/><br/>
-            <input type="number" onChange={(e) => setPieces(e.target.value)} value={pieces} placeholder="# of Pieces" /><br/><br/>
-            <input type="checkbox" onChange={(e) => setBuilt(e.target.checked)} value={built}/>
-            <label htmlFor="built">Built</label><br/><br/>
-            <button type="submit">Add Set</button>
+            <input className='input' type="text" onChange={(e) => setName(e.target.value)} value={name} placeholder="Name..." /><br/><br/>
+            <input className='input' type="text" onChange={(e) => setImage(e.target.value)} value={image} placeholder="Image URL..." /><br/><br/>
+            <input className='input' type="text" onChange={(e) => setTheme(e.target.value)} value={theme} placeholder="Theme..." /><br/><br/>
+            <input className='input' type="number" onChange={(e) => setPieces(e.target.value)} value={pieces} /><br/><br/>
+            <input className='built' type="checkbox" onChange={(e) => setBuilt(e.target.checked)} value={built}/>
+            <label className='built' htmlFor="built"> Built</label><br/><br/>
+            <button className='home-button' type="submit">Add Set</button>
           </form>
     </div>
     )

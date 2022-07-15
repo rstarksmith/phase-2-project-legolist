@@ -20,21 +20,26 @@ li {
 }
 
 /* Home */
-
+.home-container {
+    margin: 50px;
+}
 .home-logo {
+    display: block;
+    margin: auto;
     width: 300px;
 }
 
 .home-description {
     color: white;
-    text-align: center;
-    
+    text-align: center;  
 }
 
 .home-button {
-    background: rgb(255, 234, 46);
+    background: rgb(37, 37, 243);
     border-radius: 5px;
+    color: white;
     display: block;
+    font-weight: bold;
     margin: auto;
     padding: 5px;
     width: 80px;
@@ -79,14 +84,41 @@ li {
 
 
 /* LegoForm */
-img {
+.lego-image {
     display: block;
     margin: auto;
 }
-
+.built {
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+}
 form {
     text-align: center;
 }
+
+
+/*LegoList*/
+.search-container {
+    margin: auto;
+    padding: 50px;
+}
+
+.list-button {
+    background: rgb(37, 37, 243);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 4px;
+    width: 80px;
+    vertical-align: middle
+}
+
+.input {
+    font-size: 18px;
+    width:200px;
+}
+
+
 
 /* LegoSet*/
 .card {
@@ -113,4 +145,27 @@ form {
 .card-img {
     border-radius: 20px;
     width:300px;
+}
+
+.details-bttn {
+    background: rgb(37, 37, 243);
+    border-radius: 5px;
+    color: white;
+    margin: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    vertical-align: middle;
+    width: 80px;
+}
+
+.trash-bttn {
+    background: rgb(37, 37, 243);
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;;
+    padding: 7px;
+    vertical-align: middle;
+    width: 80px;
 }
