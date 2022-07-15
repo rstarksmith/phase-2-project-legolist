@@ -29,12 +29,13 @@ li {
 }
 
 .nav-links a {
-    color: #fff;
+    color: rgb(4, 4, 4);
 }
 
 /* LOGO */
 .logo {
-    font-size: 32px;
+    margin: 0px 0px 0px 10px;
+    width: 175px;
 }
 
 /* NAVBAR MENU */

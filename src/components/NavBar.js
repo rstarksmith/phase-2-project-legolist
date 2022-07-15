@@ -11,7 +11,7 @@ const NavBar = ({ reRenderSet }) => {
 
     return (
         <nav className="navbar" >
-            <div className="logo">LEGO List</div>
+            <img src='https://i.imgur.com/x1yEvhv.png?1' title="source: imgur.com" className="logo"/>
                 <ul className="nav-links">
                     <div className="menu">
                         <Link to="/">Home</Link>
@@ -23,3 +23,4 @@ const NavBar = ({ reRenderSet }) => {
     )
 }
 export default NavBar
+
