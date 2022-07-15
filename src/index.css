@@ -57,6 +57,7 @@ li {
 
 .nav-links a {
     color: rgb(4, 4, 4);
+    padding: 20px;
 }
 
 /* LOGO */
@@ -71,12 +72,6 @@ li {
     gap: 1em;
     font-size: 18px;
 }
-
-/* .menu li:hover {
-    background-color: #4c9e9e;
-    border-radius: 5px;
-    transition: 0.3s ease;
-} */
 
 .menu li {
     padding: 5px 14px;
@@ -98,6 +93,11 @@ form {
 
 
 /*LegoList*/
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px
+}
 .search-container {
     margin: auto;
     padding: 50px;
@@ -147,11 +147,19 @@ form {
     width:300px;
 }
 
+.image-container {
+    height: 350px
+}
+
+.set-name {
+    text-align: center;
+}
+
 .details-bttn {
     background: rgb(37, 37, 243);
     border-radius: 5px;
     color: white;
-    margin: 30px;
+    margin: 38px;
     font-size: 14px;
     font-weight: bold;
     padding: 5px;

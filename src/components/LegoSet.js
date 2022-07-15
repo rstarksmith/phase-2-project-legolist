@@ -18,9 +18,11 @@ const LegoSet = ({ lego, handleSetDelete }) => {
 
     return (
         <div className="card">
-            <img className="card-img" src={lego.image} alt="Lego Set" /> 
+            <div className='image-container'>
+                <img className="card-img" src={lego.image} alt="Lego Set" /> 
+            </div>    
             <div className="container">
-                <h3>{lego.name}</h3>
+                <h2 className='set-name'>{lego.name}</h2>
                 {showDetails ? <LegoSetDetails lego={lego}/> : null}<br/>
                 <button className='details-bttn' onClick={handleDetails} >＋ Details</button>
                 <button className='trash-bttn' onClick={handleDelete}>X Delete</button>

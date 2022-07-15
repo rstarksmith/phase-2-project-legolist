@@ -19,7 +19,7 @@ const LegoList = ({ legos, handleSetDelete, handleSearch }) => {
                     <button className='list-button' type="submit" >Search</button>
                 </form>
             </div>    
-            <div>
+            <div className='card-container'>
                 {legos.map((lego) => (<LegoSet key={lego.id} lego={lego} handleSetDelete={handleSetDelete}/>))}
             </div>
         </>  

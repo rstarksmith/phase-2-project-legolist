@@ -50,11 +50,11 @@
     },
     {
       "id": 7,
-      "name": "The Disney Castle",
-      "theme": "Disney",
-      "image": "https://www.lego.com/cdn/cs/set/assets/blt9ecbcfc462381676/71040.jpg?fit=bounds&format=jpg&quality=80&width=528&height=528&dpr=1",
-      "pieces": 4080,
-      "built": true
+      "name": "12 Grimmauld Place",
+      "theme": "Harry Potter",
+      "image": "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2022/04/Screen-Shot-2022-04-09-at-3.28.30-PM.jpg",
+      "pieces": 8543,
+      "built": false
     },
     {
       "id": 8,
@@ -95,14 +95,6 @@
       "image": "https://cdn.shopify.com/s/files/1/0011/6218/2714/products/lego-ideas-typewriter-21327_001_720x@2x.jpg?v=1623917675",
       "pieces": 2079,
       "built": true
-    },
-    {
-      "name": "12 Grimmauld Place",
-      "theme": "Harry Potter",
-      "image": "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2022/04/Screen-Shot-2022-04-09-at-3.28.30-PM.jpg",
-      "pieces": 8543,
-      "built": false,
-      "id": 14
     }
   ]
 }
