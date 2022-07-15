@@ -10,9 +10,6 @@ const LegoList = ({ legos, handleSetDelete, handleSearch }) => {
         setSearch('')
     }
 
-    // const searchResetAll = () => {
-    //     setSearch('')
-    // }
 
     return (
         <>
