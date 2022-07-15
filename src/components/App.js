@@ -36,6 +36,16 @@ const App = () => {
     setCurrentLegos(filteredLegos)
   }
 
+  const builtSort = () => {
+    const builtLegos = legos.filter(lego => lego.built === true)
+    setCurrentLegos(builtLegos)
+  }
+
+  const boxSort = () => {
+    const boxLegos = legos.filter(lego => lego.built === false)
+    setCurrentLegos(boxLegos)
+  }
+
   const reRenderSet = () => {
     setCurrentLegos(legos)
   }
@@ -48,7 +58,13 @@ const App = () => {
           <LegoForm handleAddSet={handleAddSet} />
         </Route>
         <Route path="/sets">
-          <LegoList legos={currentLegos} handleSetDelete={handleSetDelete} handleSearch={handleSearch}/>
+          <LegoList 
+            legos={currentLegos} 
+            handleSetDelete={handleSetDelete} 
+            handleSearch={handleSearch} 
+            builtSort={builtSort} 
+            boxSort={boxSort}
+          />
         </Route>
         <Route exact path="/">
           <Home reRenderSet={reRenderSet} />

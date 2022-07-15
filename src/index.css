@@ -118,6 +118,31 @@ form {
     width:200px;
 }
 
+.sort-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.sort {
+    color: white;
+    
+}
+
+.sort-bttn {
+    background: rgb(37, 37, 243);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    width: 80px;
+    display: inline;
+    margin: 0 auto;
+}
+
+
 
 
 /* LegoSet*/
