@@ -8,7 +8,6 @@ const LegoForm = ( { handleAddSet}) => {
   const [theme, setTheme] = useState('')
   const [pieces, setPieces] = useState(0)
   const [built, setBuilt] = useState(false)
-
   const history = useHistory()
 
   const handleNewSet = (e) => {
@@ -36,7 +35,6 @@ const LegoForm = ( { handleAddSet}) => {
       setPieces(0)
       history.push('/sets')
     })
-    
   }
 
     return (
