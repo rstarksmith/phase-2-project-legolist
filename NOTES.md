@@ -7,7 +7,7 @@ User can keep a list of lego sets owned and post new sets as purchased.
 * collection cards
 * form to add to list
 * search sets by name 
-* built checkbox
+* built checkbox on form
 ## MVP
 * 3 Routes
     - Full List (possible button on home with route)
@@ -26,7 +26,6 @@ User can keep a list of lego sets owned and post new sets as purchased.
     - LegoSet
     - LegoDetails (to hide)
 ### Stretch Goals
-* ability to delete set card (button on card, DELETE)
-* ability to change from boxed to built and persist (PATCH)
+* ability to delete set card (button on card, DELETE) 
+* ability to change from boxed to built(PATCH)
 * ability to search/filter by theme
-* add public API to search for more sets
