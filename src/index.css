@@ -39,6 +39,7 @@ li {
     border-radius: 5px;
     color: white;
     display: block;
+    font-size: 15px;
     font-weight: bold;
     margin: auto;
     padding: 5px;
@@ -82,9 +83,11 @@ li {
 .lego-image {
     display: block;
     margin: auto;
+    width: 450px;
 }
 .built {
     color:rgb(255, 255, 255);
+    font-size: 19px;
     font-weight: bold;
 }
 form {
@@ -107,6 +110,7 @@ form {
     background: rgb(37, 37, 243);
     border-radius: 5px;
     color: white;
+    font-size: 15px;
     font-weight: bold;
     padding: 4px;
     width: 80px;
@@ -135,6 +139,7 @@ form {
     background: rgb(37, 37, 243);
     border-radius: 5px;
     color: white;
+    font-size: 15px;
     font-weight: bold;
     padding: 5px;
     width: 80px;
