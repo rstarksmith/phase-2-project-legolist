@@ -24,7 +24,9 @@ const LegoList = ({ legos, handleSetDelete, handleSearch, builtSort, boxSort }) 
                 <button onClick={boxSort} className='sort-bttn'>In Box</button>
             </div>    
             <div className='card-container'>
-                {legos.map((lego) => (<LegoSet key={lego.id} lego={lego} handleSetDelete={handleSetDelete}/>))}
+                {legos.map((lego) => (
+                    <LegoSet key={lego.id} lego={lego} handleSetDelete={handleSetDelete}/>
+                ))}
             </div>
         </>  
     )
