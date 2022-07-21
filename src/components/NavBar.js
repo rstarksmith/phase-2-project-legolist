@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-const NavBar = () => {
+const NavBar = ({ reRenderSet }) => {
 
     return (
         <nav className="navbar" >
@@ -10,7 +10,7 @@ const NavBar = () => {
                 <ul className="nav-links">
                     <div className="menu">
                         <Link to="/">Home</Link>
-                        <Link to="/sets">List</Link>
+                        <Link to="/sets" onClick={reRenderSet}>List</Link>
                         <Link to="/sets/new">Add Set</Link>
                     </div>
                 </ul>

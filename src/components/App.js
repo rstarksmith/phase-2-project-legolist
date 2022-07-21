@@ -52,7 +52,7 @@ const App = () => {
 
   return (
     <Router>
-      <NavBar />
+      <NavBar reRenderSet={reRenderSet} />
       <Switch>
         <Route path="/sets/new">
           <LegoForm handleAddSet={handleAddSet} />
