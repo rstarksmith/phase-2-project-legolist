@@ -1,18 +1,19 @@
 # LEGO List
-LEGO List helps the user keep track of their LEGO collection
+LEGO List helps the user keep track of their LEGO collection. The user is able to add and delete sets from their Lego List. 
 
 ### Requirements
-* uses Node v16.14.0
-* uses npm 8.11.0
-* must have json-server installed
-* this project is currently using Reacter Router v5.3.3 and will be updated at a later date to Reacter Router v6
+* Uses Node v16.14.0
+* Uses npm 8.11.0
+* Must have json-server installed
+* This project is currently using Reacter Router v5.3.3 and will be updated at a later date to Reacter Router v6
 
 ### Installation
 - Fork and clone
 - Open project, run *npm install* 
-- run db.json  *json-server --p 3001 --watch db.json*
-- run *npm start* in a seperate terminal
+- Run db.json  *json-server --p 3001 --watch db.json*
+- Run *npm start* in a seperate terminal
 
 ### Resources
-Images and product information sourced from lego.com
+Images and product information sourced from LEGO®
+https://www.lego.com/en-us
 
