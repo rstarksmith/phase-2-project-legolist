@@ -8,6 +8,7 @@ import LegoForm from "./LegoForm";
 
 const App = () => {
   const [legos, setLegos] = useState([])
+  const [search, setSearch] = useState('')
   const [currentLegos, setCurrentLegos] = useState([])
 
   useEffect(() => {
@@ -30,11 +31,15 @@ const App = () => {
     setCurrentLegos([...legos, newSet])
   }
 
-  const handleSearch = (search) => {
-    const filteredLegos = legos.filter(lego => {
-      return lego.name.toLowerCase().includes(search)})
-    setCurrentLegos(filteredLegos)
-  }
+  const displayedLegos = legos.filter((lego) => {
+    return lego.name.toLowerCase().includes(search)
+  })
+
+  // const handleSearch = (search) => {
+  //   const filteredLegos = legos.filter(lego => {
+  //     return lego.name.toLowerCase().includes(search)})
+  //   setCurrentLegos(filteredLegos)
+  // }
 
   const builtSort = () => {
     const builtLegos = legos.filter(lego => lego.built === true)
@@ -59,11 +64,12 @@ const App = () => {
         </Route>
         <Route path="/sets">
           <LegoList 
-            legos={currentLegos} 
+            legos={displayedLegos} 
             handleSetDelete={handleSetDelete} 
-            handleSearch={handleSearch} 
             builtSort={builtSort} 
             boxSort={boxSort}
+            search={search}
+            onSearchChange={setSearch}
           />
         </Route>
         <Route exact path="/">

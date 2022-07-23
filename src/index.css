@@ -112,6 +112,8 @@ form {
 .search-container {
     margin: auto;
     padding: 50px;
+    text-align: center;
+    color:#fff;
 }
 
 .list-button {
@@ -126,6 +128,8 @@ form {
 }
 
 .input {
+    display: inline;
+    margin: auto;
     font-size: 18px;
     width:200px;
 }

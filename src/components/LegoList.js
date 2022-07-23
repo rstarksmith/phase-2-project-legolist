@@ -1,26 +1,29 @@
-import React, { useState } from 'react'
+import React from 'react'
 import LegoSet from './LegoSet'
 
-const LegoList = ({ legos, handleSetDelete, handleSearch, builtSort, boxSort }) => {
-    const [search, setSearch] = useState('')
+const LegoList = (
+    { 
+        legos, 
+        handleSetDelete, 
+        builtSort, 
+        boxSort, 
+        search, 
+        onSearchChange 
+    }) => {
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        handleSearch(search)
-        setSearch('')
-    }
     
     return (
         <>
             <div className='search-container'>
-                <form onSubmit={handleSubmit}>
-                    <input  className='input' 
-                        onChange={(e) => setSearch(e.target.value)} 
-                        type="text" placeholder="🔍 Name..." 
-                        value={search}>
-                    </input>
-                    <button className='list-button' type="submit" >Search</button>
-                </form>
+                <label htmlFor='search'>Search Sets: </label>
+                <input  
+                    className='input' 
+                    id="search"
+                    onChange={(e) => onSearchChange(e.target.value)} 
+                    placeholder="🔍 Name.." 
+                    type="text" 
+                    value={search}
+                />
             </div>
             <div className='sort-container'>
                 <label className='sort'>Sort by: </label>
