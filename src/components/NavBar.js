@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 
-const NavBar = ({ reRenderSet }) => {
+const NavBar = () => {
 
     return (
         <nav className="navbar" >
@@ -10,7 +10,7 @@ const NavBar = ({ reRenderSet }) => {
                 <ul className="nav-links">
                     <div className="menu">
                         <NavLink exact to="/">Home</NavLink>
-                        <NavLink exact to="/sets" onClick={reRenderSet}>List</NavLink>
+                        <NavLink exact to="/sets">List</NavLink>
                         <NavLink to="/sets/new">Add Set</NavLink>
                     </div>
                 </ul>
