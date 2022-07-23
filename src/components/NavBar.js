@@ -6,7 +6,11 @@ const NavBar = () => {
 
     return (
         <nav className="navbar" >
-            <img src='https://i.imgur.com/tLdkxvn.png?1' alt='lego list logo' className="logo"/>
+            <img 
+                src='https://i.imgur.com/tLdkxvn.png?1' 
+                alt='lego list logo' 
+                className="logo"
+            />
                 <ul className="nav-links">
                     <div className="menu">
                         <NavLink exact to="/">Home</NavLink>

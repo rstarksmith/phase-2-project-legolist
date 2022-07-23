@@ -14,7 +14,11 @@ const LegoList = ({ legos, handleSetDelete, handleSearch, builtSort, boxSort }) 
         <>
             <div className='search-container'>
                 <form onSubmit={handleSubmit}>
-                    <input  className='input' onChange={(e) => setSearch(e.target.value)} type="text" placeholder="🔍 Name..." value={search}></input>
+                    <input  className='input' 
+                        onChange={(e) => setSearch(e.target.value)} 
+                        type="text" placeholder="🔍 Name..." 
+                        value={search}>
+                    </input>
                     <button className='list-button' type="submit" >Search</button>
                 </form>
             </div>
