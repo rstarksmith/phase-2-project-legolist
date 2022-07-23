@@ -11,7 +11,6 @@ const LegoList = (
         onSearchChange 
     }) => {
 
-    
     return (
         <>
             <div className='search-container'>

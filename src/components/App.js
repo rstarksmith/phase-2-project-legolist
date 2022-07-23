@@ -9,50 +9,40 @@ import LegoForm from "./LegoForm";
 const App = () => {
   const [legos, setLegos] = useState([])
   const [search, setSearch] = useState('')
-  const [currentLegos, setCurrentLegos] = useState([])
+  // const [currentLegos, setCurrentLegos] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:3001/sets')
     .then(resp => resp.json())
     .then(resp => {
       setLegos(resp)
-      setCurrentLegos(resp)
     })
   }, [])
 
   const handleSetDelete = (id) => {
     const updatedLegos = legos.filter(lego => lego.id !== id)
-    setCurrentLegos(updatedLegos)
     setLegos(updatedLegos)
   }
 
   const handleAddSet = (newSet) => {
     setLegos([...legos, newSet])
-    setCurrentLegos([...legos, newSet])
   }
 
   const displayedLegos = legos.filter((lego) => {
     return lego.name.toLowerCase().includes(search)
   })
 
-  // const handleSearch = (search) => {
-  //   const filteredLegos = legos.filter(lego => {
-  //     return lego.name.toLowerCase().includes(search)})
-  //   setCurrentLegos(filteredLegos)
-  // }
 
   const builtSort = () => {
     const builtLegos = legos.filter(lego => lego.built === true)
-    setCurrentLegos(builtLegos)
   }
 
   const boxSort = () => {
     const boxLegos = legos.filter(lego => lego.built === false)
-    setCurrentLegos(boxLegos)
   }
 
   const reRenderSet = () => {
-    setCurrentLegos(legos)
+    setSearch('')
   }
 
   return (
@@ -60,7 +50,10 @@ const App = () => {
       <NavBar reRenderSet={reRenderSet} />
       <Switch>
         <Route path="/sets/new">
-          <LegoForm handleAddSet={handleAddSet} />
+          <LegoForm 
+            handleAddSet={handleAddSet} 
+            reRenderSet={reRenderSet} 
+          />
         </Route>
         <Route path="/sets">
           <LegoList 

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 
-const LegoForm = ( { handleAddSet}) => {
+const LegoForm = ( { handleAddSet, reRenderSet }) => {
   const [name, setName] = useState('')
   const [image, setImage] = useState('')
   const [theme, setTheme] = useState('')
@@ -33,6 +33,7 @@ const LegoForm = ( { handleAddSet}) => {
       setImage('')
       setTheme('')
       setPieces(0)
+      reRenderSet()
       history.push('/sets')
     })
   }
