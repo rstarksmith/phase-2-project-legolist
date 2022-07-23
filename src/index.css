@@ -128,9 +128,11 @@ form {
 }
 
 .input {
+    border-radius: 5px;
     display: inline;
     margin: auto;
-    font-size: 18px;
+    font-size: 15px;
+    padding: 4px;
     width:200px;
 }
 
@@ -142,16 +144,14 @@ form {
     text-align: center;
 }
 
-.filter-bttn {
-    background: rgb(37, 37, 243);
+.dropdown {
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 5px;
-    width: 80px;
-    display: inline;
-    margin: 0 auto;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
 }
 
 

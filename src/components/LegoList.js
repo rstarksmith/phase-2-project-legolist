@@ -30,14 +30,14 @@ const LegoList = ({ legos, handleSetDelete, search, onSearchChange }) => {
                     className='input' 
                     id="search"
                     onChange={(e) => onSearchChange(e.target.value)} 
-                    placeholder="🔍 Name.." 
+                    placeholder="🔍 Name..." 
                     type="text" 
                     value={search}
                 />
             </div>
             <div className='filter-container'>
-                <select name="filter" onChange={handleFilter}>
-                    <option value="All">All Sets</option>
+                <select className="dropdown" name="filter" onChange={handleFilter}>
+                    <option className="drop-op" value="All">All Sets</option>
                     <option value="Built">Built</option>
                     <option value="Box">In Box</option>
                 </select>
