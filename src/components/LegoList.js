@@ -1,15 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LegoSet from './LegoSet'
 
-const LegoList = (
-    { 
-        legos, 
-        handleSetDelete, 
-        builtSort, 
-        boxSort, 
-        search, 
-        onSearchChange 
-    }) => {
+const LegoList = ({ legos, handleSetDelete, search, onSearchChange }) => {
+    const [filterBy, setFilterBy] = useState([])
+
+    const legosToDisplay = legos.filter((lego) => {
+        if(filterBy === "Built") {
+            return lego.built === true
+        } else if(filterBy === "Box") {
+            return lego.built === false
+        } else {
+            return legos
+        }
+    })
+
+    const renderLegos = legosToDisplay.map((lego) => (
+        <LegoSet key={lego.id} lego={lego} handleSetDelete={handleSetDelete}/>
+    ))
+    
+    const handleFilter = (e) => { 
+        setFilterBy(e.target.value)
+    }
 
     return (
         <>
@@ -24,15 +35,15 @@ const LegoList = (
                     value={search}
                 />
             </div>
-            <div className='sort-container'>
-                <label className='sort'>Sort by: </label>
-                <button onClick={builtSort} className='sort-bttn'>Built</button>
-                <button onClick={boxSort} className='sort-bttn'>In Box</button>
+            <div className='filter-container'>
+                <select name="filter" onChange={handleFilter}>
+                    <option value="All">All Sets</option>
+                    <option value="Built">Built</option>
+                    <option value="Box">In Box</option>
+                </select>
             </div>    
             <div className='card-container'>
-                {legos.map((lego) => (
-                    <LegoSet key={lego.id} lego={lego} handleSetDelete={handleSetDelete}/>
-                ))}
+                {renderLegos}
             </div>
         </>  
     )

@@ -134,7 +134,7 @@ form {
     width:200px;
 }
 
-.sort-container {
+.filter-container {
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
@@ -142,11 +142,7 @@ form {
     text-align: center;
 }
 
-.sort {
-    color: white;
-}
-
-.sort-bttn {
+.filter-bttn {
     background: rgb(37, 37, 243);
     border-radius: 5px;
     color: white;

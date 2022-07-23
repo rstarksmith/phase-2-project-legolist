@@ -9,7 +9,6 @@ import LegoForm from "./LegoForm";
 const App = () => {
   const [legos, setLegos] = useState([])
   const [search, setSearch] = useState('')
-  // const [currentLegos, setCurrentLegos] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:3001/sets')
@@ -25,21 +24,21 @@ const App = () => {
   }
 
   const handleAddSet = (newSet) => {
-    setLegos([...legos, newSet])
+    const addToLegos = [...legos, newSet]
+    setLegos(addToLegos)
   }
 
   const displayedLegos = legos.filter((lego) => {
     return lego.name.toLowerCase().includes(search)
   })
 
+  // const builtFilter = () => {
+  //   const builtArray = legos.filter(lego => lego.built === true)
+  // }
 
-  const builtSort = () => {
-    const builtLegos = legos.filter(lego => lego.built === true)
-  }
-
-  const boxSort = () => {
-    const boxLegos = legos.filter(lego => lego.built === false)
-  }
+  // const boxFilter = () => {
+  //   const boxArray = legos.filter(lego => lego.built === false)
+  // }
 
   const reRenderSet = () => {
     setSearch('')
@@ -59,8 +58,8 @@ const App = () => {
           <LegoList 
             legos={displayedLegos} 
             handleSetDelete={handleSetDelete} 
-            builtSort={builtSort} 
-            boxSort={boxSort}
+            // builtFilter={builtFilter} 
+            // boxFilter={boxFilter}
             search={search}
             onSearchChange={setSearch}
           />
