@@ -26,6 +26,10 @@ User can keep a list of lego sets owned and post new sets as purchased.
     - LegoSet
     - LegoDetails (to hide)
 ### Stretch Goals
-* ability to delete set card (button on card, DELETE) 
-* ability to change from boxed to built(PATCH)
-* ability to search/filter by theme
+* Ability to delete set card (button on card, DELETE) ✓
+* Ability to change from boxed to built(PATCH)
+* Ability to search/filter by theme 
+
+### Revisit - Refactor
+* Update project to newest version of React Router
+
