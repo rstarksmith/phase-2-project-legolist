@@ -32,21 +32,13 @@ const App = () => {
     return lego.name.toLowerCase().includes(search)
   })
 
-  // const builtFilter = () => {
-  //   const builtArray = legos.filter(lego => lego.built === true)
-  // }
-
-  // const boxFilter = () => {
-  //   const boxArray = legos.filter(lego => lego.built === false)
-  // }
-
   const reRenderSet = () => {
     setSearch('')
   }
 
   return (
     <Router>
-      <NavBar reRenderSet={reRenderSet} />
+      <NavBar />
       <Switch>
         <Route path="/sets/new">
           <LegoForm 
@@ -58,8 +50,6 @@ const App = () => {
           <LegoList 
             legos={displayedLegos} 
             handleSetDelete={handleSetDelete} 
-            // builtFilter={builtFilter} 
-            // boxFilter={boxFilter}
             search={search}
             onSearchChange={setSearch}
           />

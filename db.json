@@ -97,11 +97,11 @@
       "built": true
     },
     {
-      "name": "fghdfgh",
-      "theme": "dfghdfh",
-      "image": "dghdfgh",
-      "pieces": 13456435,
-      "built": true,
+      "name": "",
+      "theme": "",
+      "image": "",
+      "pieces": 0,
+      "built": false,
       "id": 13
     }
   ]

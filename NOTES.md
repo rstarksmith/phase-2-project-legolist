@@ -32,4 +32,5 @@ User can keep a list of lego sets owned and post new sets as purchased.
 
 ### Revisit - Refactor
 * Update project to newest version of React Router
+* Update project using styled components
 

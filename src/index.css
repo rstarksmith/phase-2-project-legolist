@@ -14,11 +14,6 @@ a {
     text-decoration: none;
 }
 
-li {
-    list-style: none;
-}
-
-
 /* Home */
 .home-container {
     margin: 50px;
@@ -38,6 +33,7 @@ li {
     background: rgb(37, 37, 243);
     border-radius: 5px;
     color: white;
+    cursor: pointer;
     display: block;
     font-size: 15px;
     font-weight: bold;
@@ -116,16 +112,6 @@ form {
     color:#fff;
 }
 
-.list-button {
-    background: rgb(37, 37, 243);
-    border-radius: 5px;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 4px;
-    width: 80px;
-    vertical-align: middle
-}
 
 .input {
     border-radius: 5px;
@@ -190,6 +176,7 @@ form {
     background: rgb(37, 37, 243);
     border-radius: 5px;
     color: white;
+    cursor: pointer;
     font-size: 14px;
     font-weight: bold;
     margin: 38px;
@@ -202,6 +189,7 @@ form {
     background: rgb(37, 37, 243);
     border-radius: 5px;
     color: white;
+    cursor: pointer;
     font-size: 14px;
     font-weight: bold;;
     padding: 7px;
