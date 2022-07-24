@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home";
 import LegoList from "./LegoList";
@@ -37,7 +37,7 @@ const App = () => {
   }
 
   return (
-    <Router>
+    <>
       <NavBar />
       <Switch>
         <Route path="/sets/new">
@@ -58,7 +58,7 @@ const App = () => {
           <Home reRenderSet={reRenderSet} />
         </Route>
       </Switch>
-    </Router>
+    </>
   )
 }
 
