@@ -32,21 +32,14 @@ const App = () => {
     return lego.name.toLowerCase().includes(search)
   })
 
-  const reRenderSet = () => {
-    setSearch('')
-  }
-
   return (
     <>
       <NavBar />
       <Switch>
-        <Route path="/sets/new">
-          <LegoForm 
-            handleAddSet={handleAddSet} 
-            reRenderSet={reRenderSet} 
-          />
+        <Route exact path="/">
+          <Home />
         </Route>
-        <Route path="/sets">
+        <Route exact path="/sets">
           <LegoList 
             legos={displayedLegos} 
             handleSetDelete={handleSetDelete} 
@@ -54,8 +47,11 @@ const App = () => {
             onSearchChange={setSearch}
           />
         </Route>
-        <Route exact path="/">
-          <Home reRenderSet={reRenderSet} />
+        <Route path="/sets/new">
+          <LegoForm 
+            handleAddSet={handleAddSet} 
+            onSearchChange={setSearch} 
+          />
         </Route>
       </Switch>
     </>

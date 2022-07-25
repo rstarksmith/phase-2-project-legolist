@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 
-const LegoForm = ( { handleAddSet, reRenderSet }) => {
+const LegoForm = ( { handleAddSet, onSearchChange }) => {
   const [name, setName] = useState('')
   const [image, setImage] = useState('')
   const [theme, setTheme] = useState('')
@@ -33,7 +33,7 @@ const LegoForm = ( { handleAddSet, reRenderSet }) => {
       setImage('')
       setTheme('')
       setPieces(0)
-      reRenderSet()
+      onSearchChange('')
       history.push('/sets')
     })
   }
@@ -76,7 +76,7 @@ const LegoForm = ( { handleAddSet, reRenderSet }) => {
               value={built}
             />
             <label className='built' htmlFor="built"> Built</label><br/><br/>
-            <button className='home-button' type="submit">Add Set</button>
+            <button className='home-bttn' type="submit">Add Set</button>
           </form>
     </div>
     )
